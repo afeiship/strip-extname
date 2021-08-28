@@ -1,0 +1,14 @@
+{
+  "name": "@afeiship/image-processor",
+  "version": "1.0.0",
+  "description": "Everything about image.",
+  "homepage": "https://github.com/afeiship/image-processor",
+  "author": {
+    "name": "afeiship",
+    "email": "1290657123@qq.com"
+  },
+  "license": "MIT",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  }
+}
