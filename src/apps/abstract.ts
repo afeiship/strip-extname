@@ -1,5 +1,5 @@
 export class Abstract {
-  start() {
+  public start() {
     console.log('start.');
   }
 }

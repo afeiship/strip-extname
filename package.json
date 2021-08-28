@@ -23,7 +23,6 @@
     "typescript": "^4.4.2"
   },
   "dependencies": {
-    "@afeiship/rails-site-api": "^1.0.4",
     "@jswork/next": "^1.0.9",
     "@jswork/next-dt-log": "^1.1.3",
     "@jswork/next-fs-open": "^1.0.1",
