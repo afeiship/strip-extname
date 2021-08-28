@@ -1,2 +1,8 @@
 name: fasimi.com
 version: 1.0.0
+api:
+  app: fsm
+  environment: beta
+modules:
+  - watermark
+  - weibo

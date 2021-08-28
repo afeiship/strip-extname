@@ -1,20 +1,18 @@
 import '@/types';
 import argsParser from 'args-parser';
+import RailsSiteApi from '@afeiship/rails-site-api';
 import '@jswork/next-require';
-
-const args = argsParser(process.argv);
 
 nx.require({
   pattern: ['@jswork/next-*', '@afeiship/next-*', '!@jswork/next-require'],
   scope: ['dependencies']
 });
 
-console.log('path:', `./config/${args.name}.yml`);
+const $args = argsParser(process.argv);
+const $conf = new nx.YamlConfiguration({ path: `./config/${$args.name}.yml` });
+const $api = RailsSiteApi.get(
+  $conf.get('api.app'),
+  $conf.get('api.environment')
+);
 
-
-nx.global({
-  args,
-  conf: new nx.YamlConfiguration({ path: `./config/${args.name}.yml` })
-});
-
-// console.log('nx', nx);
+nx.sets({ $args, $conf, $api });

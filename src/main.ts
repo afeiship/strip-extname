@@ -3,8 +3,11 @@ import '@/setup';
 
 class App {
   public static start() {
-    console.log(nx.$global.args, nx.$global.conf.gets());
-    console.log('[hello app] 🐶:', nx.VERSION);
+    console.log(nx.$args, nx.$conf.gets());
+    const { name } = nx.$args;
+    const App = require(`./apps/${name}`).default;
+    const app = new App();
+    app.start();
   }
 }
 
