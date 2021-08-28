@@ -1,3 +1,4 @@
+import '@/types';
 import '@jswork/next-require';
 
 nx.require({
@@ -5,8 +6,8 @@ nx.require({
   scope: ['dependencies']
 });
 
-nx.global({
-  conf: new nx.YamlConfiguration({ path: './config.yml' }),
-  log: nx.DtLog.log,
-  error: nx.DtLog.error
-});
+// nx.global({
+//   conf: new nx.YamlConfiguration({ path: './config.yml' })
+// });
+
+// console.log('nx', nx);
